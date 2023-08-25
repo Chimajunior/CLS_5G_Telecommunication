@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transform: all .2s linear;
+}
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    height: 80px;
+    z-index: 999;
+}
+  
+.navbar .logo {
+    width: 150px;
+    height: 80px;
+  
+}
+
+.navbar .logo img {
+    width: 150px;
+    height: 80px;
+  
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 13px;
+    border-radius: 3px;
+    margin-top: 10px;
+  
+}
+
+.navbar .menu li a.active,
+.navbar .menu li a:hover{
+    background-color: white;
+    color: #27ae60;
+}
+
+.navbar .menu li a i{
+    color: #055423;
+}
+.navbar .menu li a i:hover{
+    color: #055423;
+}
+body{
+    background-color: #2ecc71;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    max-height: 120vh;
+    padding-bottom: 60px;
+}
+
+#mainheader {
+    margin-top: 30px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  h1 {
+    color: #4caf50;
+    padding: 0;
+  }
+.container form{
+    padding: 20px;
+    width: 700px;
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    image-rendering: optimizeSpeed;
+    border-radius: 5px;
+
+}
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.container form .row :is(:hover :focus) {
+    animation: ease-out;
+}
+.container form .row .col{
+    flex:1 1 250px ;
+}
+.container form  .title{
+     font-size: 1.5em;
+     padding-bottom: 5px; 
+     margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.container form .inputBox{
+    margin: 15px 0;
+}
+.container form .inputBox span{
+   margin-bottom: 5px;
+   display: block;
+}
+.container form .inputBox  img{
+    width: 270px;
+    height: 350px;
+    
+}
+.container form  input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+    border-radius: 5px;
+
+}
+.container form  input:is(#cardname, #card, #year, #cvv){
+    padding-left: 33px;
+
+}
+
+.container form  .inputBox input:focus{
+    border: 1px solid #000;
+}
+.container form .row .col .flex{
+    display: flex;
+    gap: 15px;
+}
+
+.container form  .inputBox{
+    margin-top: 5px;
+}
+.container form .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+.container form .submit-btn{
+    width: 80%;
+    padding: 12px;
+    font-size: 17px;
+    background: #27ae60;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+    margin-left: 60px; 
+    margin-top: 20px;       
+
+}
+
+.container form .submit-btn a{
+    text-decoration: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    margin-top: 5px;
+  
+}
+.container form .submit-btn:hover{
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #27ae60;
+}
+
+i{
+    position: relative;
+    bottom: 35px;    
+    font-size: 15px;
+    color: #555555;
+    left: 10px;
+}
+.container form  .payment-logo{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: #27ae60;
+    border-radius: 50%;
+    box-shadow: 0 0 5px;
+    text-align: center;
+    line-height: 85px;
+}
+.container form  .payment-logo::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.container form .row .col .payment-logo p{
+    color: white;
+    position: relative;
+    font-size: 55px;
+}
+input{
+    caret-color: #27ae60;
+}
+input::placeholder {
+    color: #999;
+  }
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  .menu-btn{
+    display: block;
+    z-index: 999;
+}
+
+.menu-btn i.active::before{
+    content: "\f00d";
+}
+
+.navbar .menu{
+    position: fixed ;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    background-color: #055423;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+}
+.navbar .menu.active{
+    left: 0;
+}
+
+.navbar .menu li{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .menu li a {
+    margin: 10px 0;
+    font-size: 25px;
+}
+.navbar .menu li a i{
+    color: #fff;
+}
+    .container{
+        padding: 15px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+  
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+    
+    .navbar .menu{
+        position: fixed ;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background-color: #055423;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+  
+    .navbar .menu li{
+        display: flex;
+        justify-content: center;
+    }
+  
+    .navbar .menu li a {
+        margin: 10px 0;
+        font-size: 25px;
+    }
+    .navbar .menu li a i{
+        color: #fff;
+    }
+
+     
+}

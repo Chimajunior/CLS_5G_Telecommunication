@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Register</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="shortcut icon" href="img/profile.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <div class="logo"><img src="img/cover.png" alt="" /></div>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="About Us CLS_5G.html">About</a></li>
+            <li><a href="Contact Us.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+          </ul>
+
+          <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div transition-style class="form-box --in-custom">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">
+            Log In
+            </button>
+            <button type="button" class="toggle-btn" onclick="register()">
+              Register
+            </button>
+          </div>
+     
+          <form id="login" class="input-group">
+            <input type="text" id="username" class="input-field" placeholder="Username" />
+            <input type="text" id="passwrd" class="input-field" placeholder="Password" />
+            <input type="checkbox" class="check-box" /> 
+            <label for="checkbox" id="span-checkbox-p">Remember Password</label>
+            <a href="" id="forgot-pass">forgot password?</a>
+            <button type="button" id="log" class="submit-btn">Log in</button>
+            
+          </form>
+          <form id="register" class="input-group">
+            <input type="text" id="reg-username" class="input-field" placeholder="Username" />
+            <input type="email" id="reg-email" class="input-field" placeholder="Email Address" />
+            <input type="password" id="reg-passwrd" class="input-field" placeholder="Password" />
+            <input type="password" id="con-passwrd" class="input-field" placeholder="Confirm Password" />
+            <input type="checkbox" class="check-box" />
+            <label for="checkbox" id="span-checkbox-t">I agree to the terms & conditions</label>
+            <button type="button" id="reg" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </main>
+      <footer>&copy; 2023 CLS 5G Telecommunication. All rights reserved.</footer>
+
+      <script>
+        $(document).ready(function () {
+          $("#log").click(function () {
+            var name = $("#username").val();
+            var pass = $("#passwrd").val();
+
+            if (name == "" || pass == "") {
+              Swal.fire({
+                icon: "error",
+                title: "Error!!",
+                text: "Please fill in the required columns",
+                type: "thankyou",
+              });
+              return;
+            } else if (!name == "" || !pass == "") {
+              Swal.fire({
+                icon: "success",
+                title: "Good job!!",
+                text: "You have logged in",
+                type: "thankyou",
+              }).then(function () {
+                window.location = "index.html";
+              });
+            }
+          });
+        });
+    
+          $("#reg").click(function () {
+            var regname = $("#reg-username").val();
+            var regpass = $("#reg-passwrd").val();
+            var confirmpass = $("#con-passwrd").val();
+            var email = $("#reg-email").val();
+            var checkbox = $(".check-box");
+            var regexmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+            var regexname = /^[A-Za-z][A-Za-z0-9_]{7,20}$/;
+            var regexpass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+
+
+            if (!checkbox.is(":checked")) {
+              Swal.fire({
+                icon: "error",
+                title: "Error!!",
+                text: "Please check the box",
+                type: "thankyou",
+              });
+              return;
+            }
+
+            if (regname == "" || regpass == "" || email == "") {
+              Swal.fire({
+                icon: "error",
+                title: "Error!!",
+                text: "Please fill in the required columns",
+                type: "thankyou",
+              });
+              return;
+            } else if (!regname == "" || !regpass == "" || !email == "") {
+              Swal.fire({
+                icon: "success",
+                title: "Thank you for registering with us :)",
+                type: "thankyou",
+              }).then(function () {
+                window.location = "index.html";
+              });
+            }
+
+            if (!regexname.test(regname)) {
+              Swal.fire({
+                icon: "error",
+                title: "Invalid Username !!!",
+                html:
+                  "1. Username must be between 8 and 21 letters. <br>" +
+                  "2. Username cannot start with a number. <br>" +
+                  "3. Username cannot have (.) inside, only (_) is allowed.",
+                type: "thankyou",
+              });
+              return;
+            }
+
+            if (!regexmail.test(email)) {
+              Swal.fire({
+                icon: "error",
+                title: "Invalid Email !!!",
+                text: "Please input a valid email",
+                type: "thankyou",
+              });
+              return;
+            }
+
+            if (!regexpass.test(regpass)) {
+              Swal.fire({
+                icon: "error",
+                title: "Invalid Password !!!",
+                html:
+                  "1. It must be a minimum of 8 characters. <br>" +
+                  "2. At least one uppercase letter. <br>" +
+                  "3. At least one lowercase letter. <br>" +
+                  "4. At least one digit. <br>" +
+                  "5. At least one special character. <br>",
+                type: "thankyou",
+              });
+              return;
+            }
+
+            if (confirmpass != regpass) {
+              Swal.fire({
+                icon: "error",
+                title: "Password doesn't match!!!",
+                type: "thankyou",
+              });
+              return;
+            }
+
+          });
+       
+      </script>
+
+      <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        var form = document.querySelector(".form-box");
+
+        function register() {
+          x.style.left = "-400px";
+          y.style.left = "50px";
+          z.style.left = "110px";
+          form.style.height = "520px";
+        }
+
+        function login() {
+          x.style.left = "50px";
+          y.style.left = "450px";
+          z.style.left = "0px";
+          z.style.color = "white";
+          form.style.height = "480px";
+        }
+      </script>
+
+      <!-- responsive -->
+      <script>
+        $(".menu-btn").click(function () {
+          $(".navbar .menu").toggleClass("active");
+          $(".menu-btn i").toggleClass("active");
+        });
+      </script>
+    </div>
+  </body>
+</html>
