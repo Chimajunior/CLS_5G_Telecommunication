@@ -217,27 +217,42 @@ footer {
   .menu-btn i.active::before {
     content: "\f00d";
   }
+
   .navbar {
     width: 100%;
+    height: 50px;
+  }
+  .navbar .logo {
+    width: 120px;
+    height: inherit;
+    margin-left: 15px;
+  }
+  .navbar .logo img {
+    height: inherit;
+    width: inherit;
   }
 
   .navbar .menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100vh;
     width: 100%;
     left: -100%;
-    top: 0;
+    top: 0px;
     bottom: 0;
     background-color: #055423;
     text-align: center;
-    padding-top: 80px;
     transition: all 0.3s ease;
   }
   .navbar .menu.active {
+    padding: 0;
+    padding-top: 80px;
     left: 0;
   }
 
   .navbar .menu li {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
   }
@@ -246,9 +261,11 @@ footer {
     margin: 10px 0;
     font-size: 25px;
   }
-  .navbar .menu li a i {
-    color: #fff;
-  }
+  
+  footer {
+      padding: 10px;
+      font-size: 13px;
+    }
   .aboutUs {
     max-width: 100%;
     display: flex;
@@ -257,13 +274,14 @@ footer {
     align-items: center;
   }
   .card {
-    max-width: 500px;
+    max-width: 100%;
     height: 21%;
     margin-bottom: 20px;
   }
   .card:hover {
     background-color: whitesmoke;
     transition: none;
+    cursor: auto;
   }
   .button:hover {
     background-color: #27ae60;
@@ -281,23 +299,41 @@ footer {
     content: "\f00d";
   }
 
+  .navbar {
+    width: 100%;
+    height: 70px;
+  }
+  .navbar .logo {
+    width: 120px;
+    height: inherit;
+    margin-left: 15px;
+  }
+  .navbar .logo img {
+    height: inherit;
+    width: inherit;
+  }
+
   .navbar .menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100vh;
     width: 100%;
     left: -100%;
-    top: 0;
+    top: 0px;
+    bottom: 0;
     background-color: #055423;
     text-align: center;
-    padding-top: 80px;
     transition: all 0.3s ease;
   }
-
   .navbar .menu.active {
+    padding: 0;
+    padding-top: 80px;
     left: 0;
   }
 
   .navbar .menu li {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
   }
@@ -306,9 +342,11 @@ footer {
     margin: 10px 0;
     font-size: 25px;
   }
-  .navbar .menu li a i {
-    color: #fff;
-  }
+  
+  footer {
+      padding: 10px;
+      font-size: 20px;
+    }
 
   .aboutUs {
     width: 100%;
