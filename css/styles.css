@@ -42,7 +42,7 @@ body {
 }
 .navbar .logo img {
   width: 150px;
-  height: 80px;
+  height: inherit;
 }
 
 .navbar .menu li {
@@ -429,7 +429,20 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  
+
+  .router-photo-frame {
+    flex-direction: column;
+  }
+
+  .float-img {
+    
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    animation: none;
+  }
+ 
+
   footer {
     padding: 10px;
     font-size: 13px;
