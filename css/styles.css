@@ -388,10 +388,10 @@ footer {
   }
   .navbar .logo {
     width: 100px;
-    height: 50px;
+    height: inherit;
     margin-left: 15px;
   }
-  
+
   .navbar .menu {
     position: fixed;
     height: 100vh;
@@ -430,7 +430,10 @@ footer {
     align-items: center;
   }
   
-
+  footer {
+    padding: 10px;
+    font-size: 13px;
+  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
