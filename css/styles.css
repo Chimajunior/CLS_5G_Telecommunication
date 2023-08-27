@@ -408,16 +408,18 @@ footer {
   }
 
   .main-content h2 {
-    font-size: 38px;
-    margin: 0;
-    margin-bottom: 20px;
+    font-size: 38px; 
   }
   
   .main-content p {
     font-size: 14px;
-    margin: 0;
-    margin-bottom: 30px;
   }
+
+  #features-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  
 
 }
 
