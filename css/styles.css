@@ -428,7 +428,11 @@ footer {
     margin: 10px 0;
     font-size: 25px;
   }
-
+  
+  footer {
+      padding: 10px;
+      font-size: 13px;
+    }
   .main-content {
     width: 100%;
   }
@@ -472,10 +476,7 @@ footer {
     animation: none;
   }
 
-  footer {
-    padding: 10px;
-    font-size: 13px;
-  }
+  
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
