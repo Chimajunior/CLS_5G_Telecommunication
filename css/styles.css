@@ -135,10 +135,10 @@ p {
   justify-content: center;
   align-items: center;
   animation: slide 40s infinite;
+  background-position: center top;
+  background-size: cover;
   /* background-attachment: scroll; */
-  /* background-size: cover; */
   /* background-repeat: no-repeat; */
-  /* background-position: center top; */
   /* -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover; */
@@ -181,39 +181,39 @@ p {
 
 @keyframes slide {
   0% {
-    background-image: url(/./img/21239.jpg);
+    background-image: url("/./img/21239.jpg");
     background-size: cover;
   }
   20% {
-    background-image: url(/./img/23324.jpg);
+    background-image: url("/./img/23324.jpg");
     background-size: cover;
   }
   30% {
-    background-image: url(/./img/futuristic-smart-city-with-5g-global-network-technology.jpg);
+    background-image: url("/./img/futuristic-smart-city-with-5g-global-network-technology.jpg");
     background-size: cover;
   }
   40% {
-    background-image: url(/./img/pexels-pixabay-256102.jpg);
+    background-image: url("/./img/pexels-pixabay-256102.jpg");
     background-size: cover;
   }
   50% {
-    background-image: url(/./img/SL-091319-23410-12.jpg);
+    background-image: url("/./img/SL-091319-23410-12.jpg");
     background-size: cover;
   }
   60% {
-    background-image: url(/./img/technology-particle-dots-5g-digital-corporate-background.jpg);
+    background-image: url("/./img/technology-particle-dots-5g-digital-corporate-background.jpg");
     background-size: cover;
   }
   70% {
-    background-image: url(/./img/telecommunications-towers-against-cloudy-sky.jpg);
+    background-image: url("/./img/telecommunications-towers-against-cloudy-sky.jpg");
     background-size: cover;
   }
   80% {
-    background-image: url(/./img/technology-particle-dots-5g-digital-corporate-background.jpg);
+    background-image: url("/./img/technology-particle-dots-5g-digital-corporate-background.jpg");
     background-size: cover;
   }
   100% {
-    background-image: url(/./img/futuristic-smart-city-with-5g-global-network-technology.jpg);
+    background-image: url("/./img/futuristic-smart-city-with-5g-global-network-technology.jpg");
     background-size: cover;
   }
 }
@@ -373,6 +373,9 @@ footer {
 /* responsiveness */
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-size: auto;
+  }
   .menu-btn {
     display: block;
     z-index: 999;
@@ -387,27 +390,36 @@ footer {
     height: 50px;
   }
   .navbar .logo {
-    width: 100px;
+    width: 120px;
     height: inherit;
     margin-left: 15px;
   }
+  .navbar .logo img {
+    height: inherit;
+    width: inherit;
+  }
 
   .navbar .menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100vh;
     width: 100%;
     left: -100%;
-    top: 0;
+    top: -16px;
+    bottom: 0;
     background-color: #055423;
     text-align: center;
-    padding-top: 80px;
     transition: all 0.3s ease;
   }
   .navbar .menu.active {
+    padding: 0;
+    padding-top: 80px;
     left: 0;
   }
 
   .navbar .menu li {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
   }
@@ -417,12 +429,25 @@ footer {
     font-size: 25px;
   }
 
-  .main-content h2 {
-    font-size: 38px; 
+  .main-content {
+    width: 100%;
   }
-  
+  .main-content h2 {
+    font-size: 32px;
+  }
+
   .main-content p {
-    font-size: 14px;
+    font-size: 18px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .first-btn {
+    font-size: 15px;
+    padding: 8px 18px;
+    margin-bottom: 20px;
   }
 
   #features-box {
@@ -430,18 +455,22 @@ footer {
     align-items: center;
   }
 
+  .features {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
   .router-photo-frame {
     flex-direction: column;
   }
 
   .float-img {
-    
     width: 100%;
     height: auto;
     padding: 50px;
     animation: none;
   }
- 
 
   footer {
     padding: 10px;
@@ -450,6 +479,9 @@ footer {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-size: auto;
+  }
   .menu-btn {
     display: block;
     z-index: 999;
@@ -459,22 +491,41 @@ footer {
     content: "\f00d";
   }
 
+  .navbar {
+    width: 100%;
+    height: 50px;
+  }
+  .navbar .logo {
+    width: 120px;
+    height: inherit;
+    margin-left: 15px;
+  }
+  .navbar .logo img {
+    height: inherit;
+    width: inherit;
+  }
+
   .navbar .menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100vh;
     width: 100%;
     left: -100%;
-    top: 0;
+    top: -16px;
+    bottom: 0;
     background-color: #055423;
     text-align: center;
-    padding-top: 80px;
     transition: all 0.3s ease;
   }
   .navbar .menu.active {
+    padding: 0;
+    padding-top: 80px;
     left: 0;
   }
 
   .navbar .menu li {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
   }
@@ -482,10 +533,60 @@ footer {
   .navbar .menu li a {
     margin: 10px 0;
     font-size: 25px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+  .main-content h2 {
+    font-size: 32px;
+  }
+
+  .main-content p {
+    font-size: 18px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .first-btn {
+    padding: 8px 18px;
+    margin-bottom: 20px;
+  }
+
+  #features-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .router-photo-frame {
+    flex-direction: column;
+  }
+
+  .float-img {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    animation: none;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 13px;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-size: auto;
+  }
   .menu-btn {
     display: block;
     z-index: 999;
@@ -495,22 +596,41 @@ footer {
     content: "\f00d";
   }
 
+  .navbar {
+    width: 100%;
+    height: 70px;
+  }
+  .navbar .logo {
+    width: 120px;
+    height: inherit;
+    margin-left: 15px;
+  }
+  .navbar .logo img {
+    height: inherit;
+    width: inherit;
+  }
+
   .navbar .menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100vh;
     width: 100%;
     left: -100%;
-    top: 0;
+    top: -16px;
+    bottom: 0;
     background-color: #055423;
     text-align: center;
-    padding-top: 80px;
     transition: all 0.3s ease;
   }
   .navbar .menu.active {
+    padding: 0;
+    padding-top: 80px;
     left: 0;
   }
 
   .navbar .menu li {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
   }
@@ -518,5 +638,54 @@ footer {
   .navbar .menu li a {
     margin: 10px 0;
     font-size: 25px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+  .main-content h2 {
+    font-size: 38px;
+  }
+
+  .main-content p {
+    font-size: 20px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .first-btn {
+    padding: 8px 18px;
+    margin-bottom: 20px;
+  }
+
+  #features-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .router-photo-frame {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .float-img {
+    width: 80%;
+    height: auto;
+    padding: 50px;
+    animation: none;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 20px;
   }
 }
