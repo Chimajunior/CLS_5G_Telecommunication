@@ -382,6 +382,16 @@ footer {
     content: "\f00d";
   }
 
+  .navbar {
+    width: 100%;
+    height: 50px;
+  }
+  .navbar .logo {
+    width: 100px;
+    height: 50px;
+    margin-left: 15px;
+  }
+  
   .navbar .menu {
     position: fixed;
     height: 100vh;
