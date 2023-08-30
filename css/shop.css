@@ -79,10 +79,7 @@ body {
 
 #con-box {
   display: flex;
-  background-image: url("/./img/starshop.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ccc;
 }
 .content {
   padding: 0 5%;
@@ -90,7 +87,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: #424144;
+  
   height: 100vh;
   width: 60%;
 }
