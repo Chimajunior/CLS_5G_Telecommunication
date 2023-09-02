@@ -9,12 +9,21 @@
     <title>pay</title>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
     <link rel="stylesheet" href="css/pay.css">
-    <link rel="shortcut icon" href="img/CLS5G.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/profile.png" type="image/x-icon" />
+
+   
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
@@ -119,16 +128,14 @@
                 </div><!--closing for column2-->
 
             </div><!--closing for row -->
-
+            <div id="but">
             <button type="submit" class="submit-btn" id="submit">CHECKOUT</button>
-
+            </div>
         </form>
 
     </div><!--closing container -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="sweetalert2.min.js"></script>
 
    
 
@@ -161,6 +168,13 @@
             }
         })
     </script>
+     <!-- Jquery for responsiveness -->
+     <script>
+        $(".menu-btn").click(function () {
+          $(".navbar .menu").toggleClass("active");
+          $(".menu-btn i").toggleClass("active");
+        });
+      </script>
 </body>
 
 </html>

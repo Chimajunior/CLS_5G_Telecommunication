@@ -6,9 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    border: none;
     text-transform: capitalize;
-    transform: all .2s linear;
+    transition: all .2s linear;
 }
 .menu-btn{
     color: #fff;
@@ -29,6 +28,7 @@
     background: rgba(0, 0, 0, 0.4);
     height: 80px;
     z-index: 999;
+    width: 100%;
 }
   
 .navbar .logo {
@@ -84,9 +84,9 @@ body{
     justify-content: center;
     align-items: center;
     padding: 25px;
-    min-height: 100vh;
-    max-height: 120vh;
+    height: 100%;
     padding-bottom: 60px;
+    width: 100%;
 }
 
 #mainheader {
@@ -100,17 +100,17 @@ body{
     font-weight: 600;
     font-size: 3em;
   }
-  h1 {
+h1 {
     color: #4caf50;
     padding: 0;
-  }
+}
 .container form{
     padding: 20px;
-    width: 700px;
+    width: 100%;
     background-color: #f9f9f9;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
-    image-rendering: optimizeSpeed;
     border-radius: 5px;
+    height: 100%;
 
 }
 .container form .row {
@@ -118,26 +118,24 @@ body{
     flex-wrap: wrap;
     gap: 15px;
 }
-.container form .row :is(:hover :focus) {
-    animation: ease-out;
-}
-.container form .row .col{
+
+.container form  .col{
     flex:1 1 250px ;
 }
 .container form  .title{
-     font-size: 1.5em;
-     padding-bottom: 5px; 
-     margin-bottom: 10px;
+    font-size: 1.5em;
+    padding-bottom: 5px; 
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 .container form .inputBox{
     margin: 15px 0;
 }
-.container form .inputBox span{
+.container form span{
    margin-bottom: 5px;
    display: block;
 }
-.container form .inputBox  img{
+.container form  img{
     width: 270px;
     height: 350px;
     
@@ -159,7 +157,7 @@ body{
 .container form  .inputBox input:focus{
     border: 1px solid #000;
 }
-.container form .row .col .flex{
+.container form .flex{
     display: flex;
     gap: 15px;
 }
@@ -172,8 +170,12 @@ body{
     margin-top: 5px;
     filter: drop-shadow(0 0 1px #000);
 }
-.container form .submit-btn{
-    width: 80%;
+#but{
+    display: flex;
+    justify-content: center;
+}
+.container  .submit-btn{
+    width: 50%;
     padding: 12px;
     font-size: 17px;
     background: #27ae60;
@@ -182,8 +184,9 @@ body{
     cursor: pointer;
     transition: 0.5s;
     border-radius: 5px;
-    margin-left: 60px; 
     margin-top: 20px;       
+    border: none;
+    
 
 }
 
@@ -199,7 +202,7 @@ body{
     box-shadow: 0 0 0 4px #fff, 0 0 0 8px #27ae60;
 }
 
-i{
+.container i{
     position: relative;
     bottom: 35px;    
     font-size: 15px;
@@ -238,93 +241,136 @@ input{
 }
 input::placeholder {
     color: #999;
-  }
-
-
-
-
-@media screen and (max-width: 768px) {
-
-  .menu-btn{
-    display: block;
-    z-index: 999;
 }
 
-.menu-btn i.active::before{
-    content: "\f00d";
-}
 
-.navbar .menu{
-    position: fixed ;
-    height: 100vh;
-    width: 100%;
-    left: -100%;
-    top: 0;
-    bottom: 0;
-    background-color: #055423;
-    text-align: center;
-    padding-top: 80px;
-    transition: all 0.3s ease;
-}
-.navbar .menu.active{
-    left: 0;
-}
 
-.navbar .menu li{
-    display: flex;
-    justify-content: center;
-}
 
-.navbar .menu li a {
-    margin: 10px 0;
-    font-size: 25px;
-}
-.navbar .menu li a i{
-    color: #fff;
-}
-    .container{
-        padding: 15px;
-    }
-    
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .menu-btn{
+@media only screen and (min-width: 380px) and (max-width: 768px) {
+    .menu-btn {
         display: block;
         z-index: 999;
-    }
-  
-    .menu-btn i.active::before{
-        content: "\f00d";
-    }
+      }
     
-    .navbar .menu{
-        position: fixed ;
+      .menu-btn i.active::before {
+        content: "\f00d";
+      }
+    
+      .navbar {
+        width: 100%;
+        height: 50px;
+      }
+      .navbar .logo {
+        width: 120px;
+        height: inherit;
+        margin-left: 15px;
+      }
+      .navbar .logo img {
+        height: inherit;
+        width: inherit;
+      }
+    
+      .navbar .menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
         height: 100vh;
         width: 100%;
         left: -100%;
         top: 0;
+        bottom: 0;
         background-color: #055423;
         text-align: center;
-        padding-top: 80px;
         transition: all 0.3s ease;
-    }
-    .navbar .menu.active{
+      }
+      .navbar .menu.active {
+        padding: 0;
+        padding-top: 80px;
         left: 0;
-    }
-  
-    .navbar .menu li{
+      }
+    
+      .navbar .menu li {
+        margin-top: 20px;
         display: flex;
         justify-content: center;
-    }
-  
-    .navbar .menu li a {
+      }
+    
+      .navbar .menu li a {
         margin: 10px 0;
         font-size: 25px;
+      }
+
+    .container{
+        padding: 15px;
+    
     }
-    .navbar .menu li a i{
-        color: #fff;
+    .container form .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 255px;
+        margin-bottom: 250px;
     }
 
+    .container form .row .col{
+        /* margin-bottom: 50%; */
+    }
+   
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1043px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+      }
+    
+      .menu-btn i.active::before {
+        content: "\f00d";
+      }
+    
+      .navbar {
+        width: 100%;
+        height: 60px;
+      }
+      .navbar .logo {
+        width: 120px;
+        height: inherit;
+        margin-left: 15px;
+      }
+      .navbar .logo img {
+        height: inherit;
+        width: inherit;
+      }
+    
+      .navbar .menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        background-color: #055423;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .navbar .menu.active {
+        padding: 0;
+        padding-top: 80px;
+        left: 0;
+      }
+    
+      .navbar .menu li {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+    
+      .navbar .menu li a {
+        margin: 10px 0;
+        font-size: 25px;
+      }
      
 }
