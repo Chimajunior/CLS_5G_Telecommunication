@@ -301,14 +301,12 @@ footer {
 }
 /* large screens */
 @media only screen and (min-width: 1025px) and (max-width: 2000px) {
-  *{
-    /* border: 2px solid red; */
-  }
+  
   #container-box {
    
     margin-top: 8.3%;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 10.4%;
   }
 
 }
