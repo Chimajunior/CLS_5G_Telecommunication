@@ -77,7 +77,7 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -122,26 +122,18 @@ p {
   line-height: 1.5;
 }
 
-.load {
-  animation: slide 20s;
-  background-size: cover;
-  background: no-repeat;
-  opacity: 20px;
-}
+
 .main-content {
   height: 739px;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: slide 40s infinite;
-  background-position: center top;
+  background-image:  url("/./img/23324.jpg");;    
   background-size: cover;
-  /* background-attachment: scroll; */
-  /* background-repeat: no-repeat; */
-  /* -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .main-content h2 {
@@ -160,62 +152,9 @@ p {
   color: #ffffff;
   background-color: #ffffff02;
   backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border-radius: 20px;
   padding: 20px;
-}
-
-/* @keyframes slide {
-  0% {
-    background-image: url(/./img/technology-particle-dots-5g-digital-corporate-background.jpg);
-    background-size: cover; 
-  }
-  50% {
-    background-image: url(/./img/futuristic-smart-city-with-5g-global-network-technology.jpg);
-    background-size: cover;
-  }
-  100% {
-    background-image: url(/./img/background-shop.jpg);
-     background-size: cover; 
-  }
-}  */
-
-@keyframes slide {
-  0% {
-    background-image: url("/./img/21239.jpg");
-    background-size: cover;
-  }
-  20% {
-    background-image: url("/./img/23324.jpg");
-    background-size: cover;
-  }
-  30% {
-    background-image: url("/./img/futuristic-smart-city-with-5g-global-network-technology.jpg");
-    background-size: cover;
-  }
-  40% {
-    background-image: url("/./img/pexels-pixabay-256102.jpg");
-    background-size: cover;
-  }
-  50% {
-    background-image: url("/./img/SL-091319-23410-12.jpg");
-    background-size: cover;
-  }
-  60% {
-    background-image: url("/./img/technology-particle-dots-5g-digital-corporate-background.jpg");
-    background-size: cover;
-  }
-  70% {
-    background-image: url("/./img/telecommunications-towers-against-cloudy-sky.jpg");
-    background-size: cover;
-  }
-  80% {
-    background-image: url("/./img/technology-particle-dots-5g-digital-corporate-background.jpg");
-    background-size: cover;
-  }
-  100% {
-    background-image: url("/./img/futuristic-smart-city-with-5g-global-network-technology.jpg");
-    background-size: cover;
-  }
 }
 
 .why-cls-frame {
