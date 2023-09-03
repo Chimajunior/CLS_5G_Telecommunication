@@ -136,7 +136,7 @@ $(document).ready(function () {
         !cvv == "" ||
         !expDate == ""
       ) {
-        Swal.fire("Good job!", "You clicked the button!", "success").then(
+        Swal.fire("Good job!", "You have paid for this product(s)!", "success").then(
           function () {
             window.location = "index.html";
           }
