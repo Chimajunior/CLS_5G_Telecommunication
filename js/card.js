@@ -46,7 +46,7 @@ function doFunB(){
 }
 
 let cNumber =document.getElementById('number');
-cNumber.addEventListener('keyup', function(e){
+cNumber.addEventListener('keyup', function(){
     let num =cNumber.value;
 
     let newValue = '';
@@ -88,7 +88,7 @@ eDate.addEventListener('keyup', function(e){
 });
 
 let cvv =document.getElementById('cvv');
-cvv.addEventListener('keyup', function(e){
+cvv.addEventListener('keyup', function(){
 
     let elen = cvv.value;
     let cvvBox =document.getElementById('cvv-box');
@@ -110,3 +110,42 @@ cvv2.addEventListener('keyup', function(e){
         cvvBox.style.border="1px solid greenyellow";
     }
 });
+
+
+
+    
+$(document).ready(function () {
+    $(".submit").click(function () {
+      var name = $(".cc-number").val();
+      var email = $("#email").val();
+      var cvv = $(".cc-cvv").val();
+      var expDate = $("#e-date").val();
+
+      if (name == "" || email == "" || cvv == "" || expDate == "") {
+        // alert('fill in the missing column')
+        Swal.fire({
+          icon: "error",
+          title: "error!!",
+          text: "please fill in the missing column",
+          
+        });
+        return;
+      } else if (
+        !name == "" ||
+        !email == "" ||
+        !cvv == "" ||
+        !expDate == ""
+      ) {
+        Swal.fire("Good job!", "You clicked the button!", "success").then(
+          function () {
+            window.location = "index.html";
+          }
+        );
+      }
+      });
+
+      
+
+  
+});
+  
