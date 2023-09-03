@@ -1,180 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
+  <head>
+    <script
+      src="https://kit.fontawesome.com/e8fa2e31b4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/card.css" />
     <title>pay</title>
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-    <link rel="stylesheet" href="css/all.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
-    <link rel="stylesheet" href="css/pay.css">
     <link rel="shortcut icon" href="img/profile.png" type="image/x-icon" />
 
-   
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
-
-</head>
-
-<body>
-    <nav class="navbar">
-        <div class="logo"><img src="img/cover.png" alt=""></div>
-        <ul class="menu">
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="About Us CLS_5G.html">About</a></li>
-            <li><a href="Contact Us.html">Contact</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="pay.html" class="active">Payment</a></li>
-        </ul> 
-  
-        <div class="menu-btn">
-            <i class="fa fa-bars"></i>
-        </div>
-    </nav>
-    <div class="container">
-        <header id="mainheader">Make Payments Here</header>
-
-        <form action="">
-
-            <div class="row">
-
-                <div class="col">
-
-                    <h1 class="title">delivery addresss </h1>
-
-                    <div class="inputBox">
-                        <span>Full-name :
-                            <yes style="color: red;" />
-                        </span>
-                        <input type="text" placeholder="sunday leo" required id="name">
-                    </div>
-                    <div class="inputBox">
-                        <span>Email :</span>
-                        <input type="email" placeholder="example@example.com" id="email" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Address :</span>
-                        <input type="text" placeholder="street - locality" id="address" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>City :</span>
-                        <input type="text" placeholder="Ikeja" id="city" required>
-                    </div>
-
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>state :</span>
-                            <input type="text" placeholder="Lagos" id="state" required>
-                        </div>
-                        <div class="inputBox">
-                            <span>Zip code :</span>
-                            <input type="text" placeholder="123456" maxlength="5" id="zip" required>
-                        </div>
-
-                    </div>
-
-                </div><!--closing for column-->
-
-                <div class="col">
-                    <h1 class="title">Payment </h1>
-
-                    <div class="inputBox">
-                        <span> Card acccepted</span>
-                        <img src="img/CREDIT.jpg" alt="">
-
-                    </div>
-
-                    <div class="inputBox">
-                        <span> Name on Card:</span>
-                        <input type="text" placeholder="mr. sunday leo" id="cardname" required>
-                        <i class="fa-solid fa-user"></i>
-
-                    </div>
-                    <div class="inputBox icon-font">
-                        <span id="mycard">Credit Card Number:</span>
-                        <input type="number" placeholder="1111 2222 3333 4444" id="card" data-mask="0000000000000000" required>
-                        <i class="fa-regular fa-credit-card"></i>
-                    </div>
-                    <div class="flex">
-                        <div class="inputBox icon-font">
-                            <span id="expire">Expiry Year:</span>
-                            <input type="number" placeholder="0000" id="year" data-mask="0000" required >
-                            <i class="fa-solid fa-calendar-days"></i>
-                        </div>
-                        <div class="inputBox icon-font">
-                            <span>CVV :</span>
-                            <input type="number" placeholder="000" data-mask="000" id="cvv" required>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-
-                    </div>
-
-                </div><!--closing for column2-->
-
-            </div><!--closing for row -->
-            <div id="but">
-            <button type="submit" class="submit-btn" id="submit">CHECKOUT</button>
-            </div>
-        </form>
-
-    </div><!--closing container -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  </head>
 
-   
+  <body>
+    <nav class="navbar">
+      <div class="logo"><img src="img/cover.png" alt="" /></div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="About Us CLS_5G.html">About</a></li>
+        <li><a href="Contact Us.html">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="pay.html" class="active">Payment</a></li>
+      </ul>
 
-    <script type="text/javascript">
-    
-        $('#submit').click(function () {
-            var name = $("#name").val();
-            var email = $("#email").val();
-            var cardname = $("#cardname").val();
-            var Year = $('#exclam').val();
+      <div class="menu-btn">
+        <i class="fa fa-bars" style="color: #fff"></i>
+      </div>
+    </nav>
 
-            if (name == '' || email == '' || cardname == "" || Year == '') {
-                // alert('fill in the missing column')
-                Swal.fire({
-                    icon: 'error',
-                    title: 'error!!',
-                    text: 'please fill in the missing column',
-                    type: 'thankyou'
-                })
-                return;
-            } else if(!name == '' || !email == '' || !cardname == "" || !Year == '') {
-                Swal.fire(
-                    'Good job!',
-                    'You clicked the button!',
-                    'success',
-                ).then(function () {
-                    window.location = "index.html";
+    <h1 id="mainhead">Make Payments Here</h1>
 
-                });
-            }
-        })
+    <div id="content">
+      <div class="container">
+        <div class="left">
+          <h1>Payment Methods</h1>
+          <hr />
+          <div class="methods">
+            <div onclick="doFun()" id="tColorA" style="color: #27ae71">
+              <i class="fa-solid fa-credit-card" style="color: #27ae71"></i
+              >Payment by card
+            </div>
+            <div onclick="doFunA()" id="tColorB">
+              <i class="fa-solid fa-building-columns"></i> Internet Banks
+            </div>
+            <div onclick="doFunB()" id="tColorC">
+              <i class="fa-solid fa-wallet"></i>Apple/Goggle pay
+            </div>
+          </div>
+          <hr />
+        </div>
+        <!--closing for left-->
+        <div class="center">
+          <h1>Card Details</h1>
+          <a href="#"
+            ><img
+              alt="Credit Card Logos"
+              title="Credit Card Logos"
+              src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png"
+              width="250"
+              height="auto"
+          /></a>
+          <hr />
+
+          <div class="card-details active">
+            <form action="">
+              <p>Card Number</p>
+              <div class="c-number" id="c-number">
+                <input
+                  id="number"
+                  class="cc-number"
+                  placeholder="Card number"
+                  maxlength="19"
+                  required
+                />
+                <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+              </div>
+
+              <div class="c-details">
+                <div>
+                  <p>Expiry date</p>
+                  <input
+                    id="e-date"
+                    class="cc-exp"
+                    placeholder="MM/YY"
+                    required
+                    maxlength="5"
+                    required
+                  />
+                </div>
+                <div>
+                  <p>CVV</p>
+                  <div class="cvv-box" id="cvv-box">
+                    <input
+                      id="cvv"
+                      class="cc-cvv"
+                      placeholder="CVV"
+                      required
+                      maxlength="3"
+                    />
+                    <i
+                      class="fa-solid fa-circle-question"
+                      title="3 digit on the back of the card"
+                      style="cursor: pointer"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="email">
+                <p>Email</p>
+                <input
+                  type="email"
+                  placeholder="sunny@gmail.com"
+                  id="email"
+                  required
+                />
+              </div>
+              <button class="submit">PAY NOW</button>
+            </form>
+          </div>
+
+          <div class="card-details2">
+            <form action="">
+              <p>Card name</p>
+              <div class="c-number" id="c-number">
+                <input
+                  id="number"
+                  class="cc-number"
+                  placeholder="Card number"
+                  maxlength="19"
+                  required
+                />
+                <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+              </div>
+
+              <div class="c-details">
+                <div>
+                  <p>Month Due:</p>
+                  <input
+                    id="e-date"
+                    class="cc-exp"
+                    placeholder="MM/YY"
+                    required
+                    maxlength="5"
+                    required
+                  />
+                </div>
+                <div>
+                  <p>CVV</p>
+                  <div class="cvv-box" id="cvv-box">
+                    <input
+                      id="cvv2"
+                      class="cc-cvv"
+                      placeholder="CVV"
+                      required
+                      maxlength="3"
+                    />
+                    <i
+                      class="fa-solid fa-circle-question"
+                      title="3 digit on the back of the card"
+                      style="cursor: pointer"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="email">
+                <p>Email</p>
+                <input
+                  type="email"
+                  placeholder="sunny@gmail.com"
+                  id="email"
+                  required
+                />
+              </div>
+              <button class="submit">PAY NOW</button>
+            </form>
+          </div>
+
+          <div class="card-details3">
+            <form action="">
+              <p>Card Number:</p>
+              <div class="c-number" id="c-number">
+                <input
+                  id="number"
+                  class="cc-number"
+                  placeholder="Card number"
+                  maxlength="19"
+                  required
+                />
+                <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+              </div>
+
+              <div class="c-details">
+                <div>
+                  <p>Exp Date:</p>
+                  <input
+                    id="e-date"
+                    class="cc-exp"
+                    placeholder="MM/YY"
+                    required
+                    maxlength="5"
+                    required
+                  />
+                </div>
+                <div>
+                  <p>CVV</p>
+                  <div class="cvv-box" id="cvv-box">
+                    <input
+                      id="cvv"
+                      class="cc-cvv"
+                      placeholder="CVV"
+                      required
+                      maxlength="3"
+                    />
+                    <i
+                      class="fa-solid fa-circle-question"
+                      title="3 digit on the back of the card"
+                      style="cursor: pointer"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="email">
+                <p>Email</p>
+                <input
+                  type="email"
+                  placeholder="sunny@gmail.com"
+                  id="email"
+                  required
+                />
+              </div>
+              <button class="submit">PAY NOW</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="right">
+          <h1>Order Information</h1>
+          <hr style="border: 1px solid #ccc; margin: 0 15px" />
+          <div class="details">
+            <div style="font-family: bold; padding: 3px 0">
+              Order description
+            </div>
+            <div style="padding: 3px 0">Test Payment</div>
+          </div>
+          <hr />
+          <a href="#"
+            ><img
+              alt="Credit Card Logos"
+              title="Credit Card Logos"
+              src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png"
+              width="100%"
+              height="auto"
+          /></a>
+        </div>
+      </div>
+      <!--closing for content-->
+    </div>
+    <!--closing for container-->
+    <script src="js/card.js"></script>
+
+    <!-- Jquery for responsiveness -->
+    <script>
+      $(".menu-btn").click(function () {
+        $(".navbar .menu").toggleClass("active");
+        $(".menu-btn i").toggleClass("active");
+      });
     </script>
-     <!-- Jquery for responsiveness -->
-     <script>
-        $(".menu-btn").click(function () {
-          $(".navbar .menu").toggleClass("active");
-          $(".menu-btn i").toggleClass("active");
-        });
-      </script>
-</body>
 
+  </body>
 </html>
