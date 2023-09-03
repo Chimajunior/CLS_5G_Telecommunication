@@ -10,14 +10,12 @@ cDetails3 = document.querySelector('.card-details3');
 
 
 function doFun(){
-    tColorA.style.color="greenyellow";
+    tColorA.style.color="#27ae71";
     tColorB.style.color="#444";
     tColorC.style.color ="#444";
-    iconA.style.color= "greenyellow";
+    iconA.style.color= "#27ae71";
     iconB.style.color= "#aaa";
     iconC.style.color="#aaa";
-    // cDetails.style.display ="block";
-    // cDetails2.style.display= "scroll";
     cDetails.classList.add("active");
     cDetails2.classList.remove("active");
     cDetails3.classList.remove("active");
@@ -25,10 +23,10 @@ function doFun(){
 
 function doFunA(){
     tColorA.style.color ="#444";
-    tColorB.style.color ="greenyellow";
+    tColorB.style.color ="#27ae71";
     tColorC.style.color ="#444";
     iconA.style.color ="#aaa";
-    iconB.style.color ="greenyellow";
+    iconB.style.color ="#27ae71";
     iconC.style.color ="#aaa";
     console.log(cDetails.classList);
     cDetails.classList.remove("active");
@@ -38,10 +36,10 @@ function doFunA(){
 function doFunB(){
     tColorA.style.color ="#444";
     tColorB.style.color ="#444";
-    tColorC.style.color ="greenyellow";
+    tColorC.style.color ="#27ae71";
     iconA.style.color ="#aaa";
     iconB.style.color ="#aaa";
-    iconC.style.color ="greenyellow";
+    iconC.style.color ="#27ae71";
     cDetails.classList.remove("active");
     cDetails2.classList.remove("active");
     cDetails3.classList.add("active");
