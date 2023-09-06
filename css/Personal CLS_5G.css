@@ -7,20 +7,20 @@
 }
 
 body{
+   
+    background-color: #27ae60;
+}
+.container{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #27ae60;
 }
 
 .about-link{
-    width: 100px;
-    position: relative;
-    top: 300px;
-    right: 700px;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -28,17 +28,12 @@ body{
 a{
     text-decoration: none;
     color: white;
-    padding: 50px;
-    margin-left: 40px;
-    background-color: #27ae60;
-    
+    text-align: center;
 }
 a:hover{
     color: #4070F4;
 }
 .slide-container{
-    position: relative;
-    left: 40px;
     margin: 0 80px;
     overflow: hidden;
     padding: 40px 0;
@@ -151,12 +146,13 @@ a:hover{
     left: 0;
 }
 .swiper-pagination-bullet{
-     background-color: #6E93f7;
+     background-color: #fff;
      opacity: 1;
 }
 .swiper-pagination-bullet-active{
       background-color: #4070F4;
 }
+
 
 
 @media screen and (max-width: 768px) {
@@ -166,4 +162,5 @@ a:hover{
 .swiper-navBtn{
      display: none;
  }
+
 }
